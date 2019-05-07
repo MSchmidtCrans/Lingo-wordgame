@@ -6,10 +6,10 @@ $(document).ready(function(){
 
 //Set play words array
 var wordsArr = [
-  "motor",
-  "beker",
-  "pekel",
-  "winst"
+  "m",
+  "b",
+  "h",
+  "l"
 ];
 
 //Start with click of the button
@@ -23,6 +23,8 @@ console.log(randomWord);
 //Insert random word in html field
 document.getElementById("randomWord").innerHTML = randomWord; 
 });
+
+//Compare user entry against picked word
 
 });
 
