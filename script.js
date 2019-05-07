@@ -6,29 +6,49 @@ $(document).ready(function(){
 
 //Set play words array
 var wordsArr = [
-  "m",
-  "b",
-  "h",
-  "l"
+  "maart",
+  "boter",
+  "ander",
+  "pakje"
 ];
 
 //Pick a word
 var randomNr = getNmbr(0,wordsArr.length-1);
 var randomWord = wordsArr[randomNr];
+var wordHistory = "";
+
+console.log(randomWord);
 
 //Start with click of the button
 $("#checkBtn").click(function(){
 
-//Compare user entry against picked word
+//Assign user entry to variable
 var userWord = document.getElementById("wordField").value;
-if (userWord == randomWord){
-  alert("LINGO");
-} else {
-  alert("FOUT. Probeer het nog eens")
-}
 
-//Insert random word in html field
-document.getElementById("randomWord").innerHTML = randomWord; 
+//Compare user entry against random word
+// Check userword letter by letter against the rando word
+var x = 5; //Set wordlength
+var spanId = "";
+for (y=0; y < x; y++) {
+if (randomWord[y] == userWord[y]) {
+  spanId += "letter" + y;
+  document.getElementById(spanId).innerHTML = userWord[y];
+  document.getElementById(spanId).style.background = "green";
+  spanId = "";
+} else if (randomWord.includes(userWord[y])) {
+  spanId += "letter" + y;
+  document.getElementById(spanId).innerHTML = userWord[y];
+  document.getElementById(spanId).style.background = "rgb(0, 204, 255)";
+  spanId = "";
+} else {
+  spanId += "letter" + y;
+  document.getElementById(spanId).innerHTML = userWord[y];
+  document.getElementById(spanId).style.background = "red";
+  spanId = "";
+}
+};
+
+
 });
 
 //End of document ready
