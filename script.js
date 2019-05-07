@@ -39,20 +39,17 @@ if (randomWord[y] == userWord[y]) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
   document.getElementById(spanId).style.background = "green";
-  document.getElementById("wordField").value ='';
   spanId = "";
   counter += 1;
 } else if (randomWord.includes(userWord[y])) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
   document.getElementById(spanId).style.background = "rgb(0, 204, 255)";
-  document.getElementById("wordField").value ='';
   spanId = "";
 } else {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
   document.getElementById(spanId).style.background = "red";
-  document.getElementById("wordField").value ='';
   spanId = "";
 }
 
