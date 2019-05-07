@@ -9,7 +9,11 @@ var wordsArr = [
   "maart",
   "boter",
   "ander",
-  "pakje"
+  "pakje",
+  "toast",
+  "lingo",
+  "chips",
+  "kroeg"
 ];
 
 //Pick a word

@@ -1,15 +1,21 @@
 # Lingo-wordgame
 Lingo 6 letter wordgame.
 
-1. Set up skeleton files, HTML, JS.
+DEMO link: https://supersmitty2018.github.io/Lingo-wordgame/
 
-2. Learn and practice how to randomize.
+1. Set up skeleton files, HTML, JS. -DONE-
 
-3. Set up practize array with 6 letter words
+2. Learn and practice how to randomize. -DONE-
 
-4. Practize how to check a word string on a letter to letter base.
+3. Set up practize array with 6 letter words -DONE-
 
-5. Apply text coloring to letters: 
-red = Completely wrong
-blue = Correct letter but wrong placement in word
-green = Completely correct
+4. Practize how to check a word string on a letter to letter base. -DONE-
+
+5. Apply text coloring to letters: <br> -DONE-
+red = Completely wrong <br>
+blue = Correct letter but wrong placement in word<br>
+green = Completely correct<br>
+
+6. Extend to 5 letter words. -DONE-
+
+7. Clean up styling with bootstrap. -DONE-
