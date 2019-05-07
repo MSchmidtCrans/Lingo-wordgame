@@ -40,7 +40,6 @@ if (randomWord[y] == userWord[y]) {
   document.getElementById(spanId).innerHTML = userWord[y];
   document.getElementById(spanId).style.background = "green";
   spanId = "";
-  counter += 1;
 } else if (randomWord.includes(userWord[y])) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
