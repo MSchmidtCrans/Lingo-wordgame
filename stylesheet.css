@@ -1,7 +1,26 @@
 span {
     color: white;
     font-size: 70px;
-    border: 2px solid grey;
-    width: 25px;
+    width: 30px;
     height: auto;
+    border-radius: 10px;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+#wordField {
+    width: 150px;
+}
+
+#checkBtn {
+    margin:10px;
+}
+
+.uitleg {
+    font-weight: bolder;
+    font-size: 20px;
 }
