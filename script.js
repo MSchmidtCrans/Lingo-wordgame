@@ -12,20 +12,26 @@ var wordsArr = [
   "l"
 ];
 
-//Start with click of the button
-$("#checkBtn").click(function(){
-
 //Pick a word
 var randomNr = getNmbr(0,wordsArr.length-1);
 var randomWord = wordsArr[randomNr];
-console.log(randomWord);
+
+//Start with click of the button
+$("#checkBtn").click(function(){
+
+//Compare user entry against picked word
+var userWord = document.getElementById("wordField").value;
+if (userWord == randomWord){
+  alert("LINGO");
+} else {
+  alert("FOUT. Probeer het nog eens")
+}
 
 //Insert random word in html field
 document.getElementById("randomWord").innerHTML = randomWord; 
 });
 
-//Compare user entry against picked word
-
+//End of document ready
 });
 
 
