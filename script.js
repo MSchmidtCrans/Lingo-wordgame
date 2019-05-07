@@ -33,12 +33,14 @@ var userWord = document.getElementById("wordField").value;
 // Check userword letter by letter against the rando word
 var x = 5; //Set wordlength
 var spanId = "";
+var counter = 0;
 for (y=0; y < x; y++) {
 if (randomWord[y] == userWord[y]) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
   document.getElementById(spanId).style.background = "green";
   spanId = "";
+  counter += 1;
 } else if (randomWord.includes(userWord[y])) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
@@ -51,6 +53,7 @@ if (randomWord[y] == userWord[y]) {
   spanId = "";
 }
 };
+
 
 
 });
