@@ -54,8 +54,11 @@ if (randomWord[y] == userWord[y]) {
   document.getElementById("wordField").value ='';
   spanId = "";
 }
-
 };
+//Show previous words
+var solutionEnd = $(".solution");
+document.getElementById("solutionHistory").innerHTML = solutionEnd;
+;
 
 });
 
