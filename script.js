@@ -28,14 +28,18 @@ $("#checkBtn").click(function(){
 
 //Assign user entry to variable
 var userWord = document.getElementById("wordField").value.toUpperCase();
-console.log(userWord);
 
 //Compare user entry against random word
 // Check userword letter by letter against the rando word
 var x = 5; //Set wordlength
 var spanId = "";
-var counter = 0;
-for (y=0; y < x; y++) {
+var y = 0;
+for (y=0; y < x; y++) {  
+if (userWord[y] == undefined) { //Check if user entered a 5 letter word
+  alert("Vergeet niet om 5 letters in te voeren!!");
+  document.getElementById("wordField").value = '';
+  break;
+}
 if (randomWord[y] == userWord[y]) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];

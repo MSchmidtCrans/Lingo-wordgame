@@ -19,3 +19,9 @@ green = Completely correct<br>
 6. Extend to 5 letter words. -DONE-
 
 7. Clean up styling with bootstrap. -DONE-
+
+-EXERCISE FINISHED-
+
+Follow up:
+
+1. Switch word values to uppercase to prevent mismatches between words -DONE-
