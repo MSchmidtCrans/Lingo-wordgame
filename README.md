@@ -25,3 +25,9 @@ green = Completely correct<br>
 Follow up:
 
 1. Switch word values to uppercase to prevent mismatches between words -DONE-
+
+2. Build a check and alert for undefinded letters -DONE-
+
+3. Limit user entry to 5 letter words -DONE-
+
+
