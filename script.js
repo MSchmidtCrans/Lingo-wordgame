@@ -18,7 +18,7 @@ var wordsArr = [
 
 //Pick a word
 var randomNr = getNmbr(0,wordsArr.length-1);
-var randomWord = wordsArr[randomNr];
+var randomWord = wordsArr[randomNr].toUpperCase();
 var wordHistory = "";
 
 console.log(randomWord);
@@ -27,7 +27,8 @@ console.log(randomWord);
 $("#checkBtn").click(function(){
 
 //Assign user entry to variable
-var userWord = document.getElementById("wordField").value;
+var userWord = document.getElementById("wordField").value.toUpperCase();
+console.log(userWord);
 
 //Compare user entry against random word
 // Check userword letter by letter against the rando word
