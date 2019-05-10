@@ -30,4 +30,6 @@ Follow up:
 
 3. Limit user entry to 5 letter words -DONE-
 
+4. Limit user entry to letters only -DONE-
+
 

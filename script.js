@@ -5,7 +5,7 @@
 $(document).ready(function(){
 
 //Set play words array
-var wordsArr = [
+let wordsArr = [
   "maart",
   "boter",
   "ander",
@@ -17,9 +17,9 @@ var wordsArr = [
 ];
 
 //Pick a word
-var randomNr = getNmbr(0,wordsArr.length-1);
-var randomWord = wordsArr[randomNr].toUpperCase();
-var wordHistory = "";
+let randomNr = getNmbr(0,wordsArr.length-1);
+let randomWord = wordsArr[randomNr].toUpperCase();
+let wordHistory = "";
 
 console.log(randomWord);
 
@@ -27,17 +27,18 @@ console.log(randomWord);
 $("#checkBtn").click(function(){
 
 //Assign user entry to variable
-var userWord = document.getElementById("wordField").value.toUpperCase();
+let userWord = document.getElementById("wordField").value.toUpperCase();
 
 //Compare user entry against random word
 // Check userword letter by letter against the rando word
-var x = 5; //Set wordlength
-var spanId = "";
-var y = 0;
+let x = 5; //Set wordlength
+let spanId = "";
+let y = 0;
+let winCounter = 0;
 for (y=0; y < x; y++) {  
 if (userWord[y] == undefined) { //Check if user entered a 5 letter word
   alert("Vergeet niet om 5 letters in te voeren!!");
-  document.getElementById("wordField").value = '';
+  document.getElementById("userField").value = '';
   break;
 }
 if (randomWord[y] == userWord[y]) {
@@ -46,6 +47,7 @@ if (randomWord[y] == userWord[y]) {
   document.getElementById(spanId).style.background = "green";
   document.getElementById("wordField").value ='';
   spanId = "";
+  winCounter++;
 } else if (randomWord.includes(userWord[y])) {
   spanId += "letter" + y;
   document.getElementById(spanId).innerHTML = userWord[y];
@@ -60,8 +62,16 @@ if (randomWord[y] == userWord[y]) {
   spanId = "";
 }
 };
+
+if (winCounter == 5) {
+  let audio = new Audio("win.mp3");
+  audio.play();
+  setTimeout(function() { 
+    alert("JOEPIE, GEWONNEN!!!"); }, 1000);;
+}
+
 //Show previous words
-var solutionEnd = $(".solution");
+let solutionEnd = $(".solution");
 document.getElementById("solutionHistory").innerHTML = solutionEnd;
 ;
 
